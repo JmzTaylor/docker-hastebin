@@ -1,13 +1,5 @@
 # Hastebin
 
-![https://hub.docker.com/r/angristan/hastebin/](https://img.shields.io/microbadger/image-size/angristan/hastebin.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/hastebin/](https://img.shields.io/microbadger/layers/angristan/hastebin.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/hastebin/](https://img.shields.io/docker/pulls/angristan/hastebin.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/hastebin/](https://img.shields.io/docker/stars/angristan/hastebin.svg?maxAge=3600&style=flat-square)
-
-[Hastebin](https://github.com/seejohnrun/haste-server) is an open-source pastebin software written in node.js.
-
-This image is automatically built by [GitLab CI](https://gitlab.com/angristan/docker-hastebin/pipelines) and pushed to the [Docker Hub](https://hub.docker.com/r/angristan/hastebin/).
-
-**I won't update this image anymore. Feel free to fork the repo.**
-
 ## Features
 
 - Based on Alpine Linux.
@@ -30,7 +22,7 @@ This image is automatically built by [GitLab CI](https://gitlab.com/angristan/do
 docker run -d \
   --name hastebin \
   -p 80:7777 \
-  angristan/hastebin:latest
+  jmzsoftware/docker-hastebin:latest
 ```
 
 As said above, the container will run as `4242:4242` by default, but you can specify the `UID` and `GID` yourself:
@@ -41,7 +33,7 @@ docker run -d \
   -p 80:7777 \
   -e UID=4242 \
   -e GID=4242 \
-  angristan/hastebin:latest
+  jmzsoftware/docker-hastebin:latest
 ```
 
 ### Volume
@@ -57,7 +49,7 @@ docker run -d \
   -p 80:7777 \
   -e UID=4242 \
   -e GID=4242 \
-  angristan/hastebin:latest
+  jmzsoftware/docker-hastebin:latest
 ```
 
 Or use a bind mount:
@@ -69,7 +61,7 @@ docker run -d \
   -p 80:7777 \
   -e UID=4242 \
   -e GID=4242 \
-  angristan/hastebin:latest
+  jmzsoftware/docker-hastebin:latest
 ```
 
 ### Docker Compose
@@ -82,7 +74,7 @@ version: '2.3'
 services:
   hastebin:
     container_name: hastebin
-    image: angristan/hastebin:latest
+    image: jmzsoftware/docker-hastebin:latest
     restart: always
     volumes:
       - ./data:/app/data

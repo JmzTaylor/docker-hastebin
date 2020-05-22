@@ -1,7 +1,7 @@
 FROM node:8-alpine
 
-LABEL maintainer="angristan"
-LABEL source="https://github.com/angristan/docker-hastebin"
+LABEL maintainer="jmztaylor"
+LABEL source="https://github.com/jmztaylor/docker-hastebin"
 
 ARG HASTEBIN_VER=master
 
